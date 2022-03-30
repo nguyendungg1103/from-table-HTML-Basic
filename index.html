@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập cấu trúc điều kiện</title>
+
+</head>
+<body>
+<img id="anh1" src="img/gấu 1.jpg" onclick="ckjcl1()"  height="79" width="304"/> <br>
+<img id="anh2" src="img/mèo%202.jpg" onclick="ckjcl2()"  height="79" width="304"/> <br>
+<img id="anh3" src="img/khỉ%203.jpg" onclick="ckjcl3()"  height="79" width="304"/> <br>
+<img id="anh4" src="img/mèo%204.jpg" onclick="ckjcl4()"  height="79" width="304"/> <br>
+<img id="anh5" src="img/khỉ%205.jpg" onclick="ckjcl5()"  height="79" width="304"/>
+
+
+<script>
+    let count = 0 ;
+    let count1 = 0 ;
+    let count2 = 0 ;
+    let count3 = 3 ;
+    let count4 = 4;
+
+    img1 = document.getElementById('anh1');
+    img2 = document.getElementById('anh2');
+    img3 = document.getElementById('anh3');
+    img4 = document.getElementById('anh4');
+    img5 = document.getElementById('anh5');
+
+
+    function ckjcl1(){
+        count++;
+        if(count == 1){
+            img1.src = 'img/gấu 1.jpg'
+        } else if (count == 2){
+            img1.src = 'img/khỉ 1.jpg'
+        }else {
+            count = 0;
+            img1.src = 'img/mèo 1.jpg'
+        }
+        check()
+    }
+    function ckjcl2(){
+        count1++;
+        if(count1 == 1){
+            img2.src = 'img/gấu 2.jpg'
+        } else if (count1 == 2){
+            img2.src = 'img/khỉ 2.jpg'
+        }else {
+            count1 = 0;
+            img2.src = 'img/mèo 2.jpg'
+        }
+        check()
+    }
+    function ckjcl3(){
+        count2++;
+        if(count2 == 1){
+            img3.src = 'img/gấu 3.jpg'
+        } else if (count2 == 2){
+            img3.src = 'img/khỉ 3.jpg'
+        }else {
+            count2 = 0;
+            img3.src = 'img/mèo 3.jpg'
+        }
+        check()
+    }
+    function ckjcl4(){
+        count3++;
+        if(count3 == 1){
+            img4.src = 'img/gấu 4.jpg'
+        } else if (count3 == 2){
+            img4.src = 'img/khỉ 4.jpg'
+        }else {
+            count3 = 0;
+            img4.src = 'img/mèo 4.jpg'
+        }
+        check()
+    }
+    function ckjcl5(){
+        count4++;
+        if(count4 == 1){
+            img5.src = 'img/gấu 5.jpg'
+        } else if (count4 == 2){
+            img5.src = 'img/khỉ 5.jpg'
+        }else {
+            count4 = 0;
+            img5.src = 'img/mèo 5.jpg'
+        }
+        check()
+    }
+
+    function check(){
+        if (count == count1 && count1 == count2 && count2 == count3 && count3 == count4){
+            img1.style.boxShadow = 'red 4px 4px 9px ';
+            img2.style.boxShadow = 'red 4px 4px 9px ';
+            img3.style.boxShadow = 'red 4px 4px 9px ';
+            img4.style.boxShadow = 'red 4px 4px 9px ';
+            img5.style.boxShadow = 'red 4px 4px 9px ';
+        } else {
+            img1.style.boxShadow = 'black 4px 4px 9px';
+            img2.style.boxShadow = 'black 4px 4px 9px';
+            img3.style.boxShadow = 'black 4px 4px 9px';
+            img4.style.boxShadow = 'black 4px 4px 9px';
+            img5.style.boxShadow = 'black 4px 4px 9px';
+        }
+    }
+
+</body>
+</html>
